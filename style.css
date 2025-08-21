@@ -1,19 +1,23 @@
 /* General body */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
-  border-radius: 8px;
-  background: #f8f8f8;
+  background: #b9c9da;
 }
 
-/* Header */
+/* Header Box */
 header {
-  background: #333;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: white;
-  padding: 15px 20px;
+  padding: 20px;
   text-align: center;
+  border: 2px solid #1e40af;
+  border-bottom: 4px solid #f97316; /* orange bottom border */
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 header nav a {
@@ -26,66 +30,83 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main content box */
 main {
-  padding: 25px;
-  margin: 25px;
-  background: #fff;
+  padding: 40px;
+  margin: 20px;
+  background: #cbe9f7;
+  border: 2px solid #93c5fd;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Address Box */
+.address-box {
+  background: #9eb1be;
+  border: 2px solid #38bdf8;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(14, 114, 22, 0.1);
-}
-
-/* Footer */
-footer {
-  text-align: center;
   padding: 20px;
-  background: #333;
-  color: white;
-  margin-top: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-
-/* Contact container row */
+.address-box h3 {
+  margin: 0 0 10px;
+  color: #1b1b1b;
+}
+.address-box p {
+  margin: 0;
+  color: #111111;
+}
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
-  margin-top: 20px;
-  column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-top: 30px;
+  column-gap: 50px; /* Increased the gap for more distance */
+  row-gap: 20px; /* Add a row-gap to control vertical space */
 }
 
 /* Each contact card */
 .contact-card {
   text-align: center;
-  background: #fafafa;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  max-width: 260px;
+  background: #c7f7f0; 
+  padding: 30px;
+  border: 1px solid #fccb93; /* orange bottom border */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(14, 13, 13, 0.1);
+  max-width: 200px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Left, center, right alignment */
-.contact-card:nth-child(1) { justify-self: start; }
-.contact-card:nth-child(2) { justify-self: center; }
-.contact-card:nth-child(3) { justify-self: end; }
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(73, 173, 173, 0.15);
+}
 
 .contact-card img {
-  width: 200px;
+  width: 100%;        /* makes the image fill the card width */
+  max-width: 350px;   /* adjust this number to control actual image size */
+  height: auto;       /* keeps aspect ratio */
   border-radius: 10px;
+  object-fit: cover;  /* ensures it fills nicely without stretching */
 }
+
 
 /* Contact titles */
 .contact-card h3 {
   margin: 10px 0 5px;
+  color: #5c534e;
 }
 
 .contact-card p {
   margin: 5px 0;
+  color: #383635;
 }
 
 /* Social icons row */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20;
   margin-top: 10px;
 }
 
@@ -95,20 +116,28 @@ footer {
 }
 
 .social-icons i {
-  color: #0077b5; /* LinkedIn Blue */
   transition: color 0.3s;
 }
 
-.social-icons i.fa-envelope {
-  color: #d93025; /* Gmail Red */
-}
-
-.social-icons i.fa-facebook {
-  color: #1877f2; /* Facebook Blue */
-}
+.social-icons i.fa-linkedin { color: #0077b5; }
+.social-icons i.fa-envelope { color: #2b2828; }
+.social-icons i.fa-facebook { color: #023272; }
 
 .social-icons a:hover i {
   opacity: 0.7;
+}
+
+/* Footer Box */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e40af, #1e40af);
+  color: rgb(243, 239, 239);
+  margin: 20px;
+  border: 2px solid #30a2c5;
+  border-top: 5px solid #f55d05; /* orange top border */
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Mobile view */
@@ -116,11 +145,10 @@ footer {
   .contact-container {
     grid-template-columns: 1fr;
     row-gap: 20px;
-    justify-items: center; /* center each card on mobile */
+    justify-items: center;
   }
   .contact-card {
-    max-width: 300px;
-    width: 100%;
+    max-width: 200px;
+    width: 80%;
   }
 }
-
