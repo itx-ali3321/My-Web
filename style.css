@@ -310,7 +310,7 @@ header {
   display: inline-block;
   padding: 20px;
   border-radius: 12px;
-  background: #fff;
+  background: #d6fdf6;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-top: 20px;
 }
@@ -336,3 +336,4 @@ footer h3, footer p, footer h4 {
 .address-box p i {
   margin-right: 8px;
 }
+
