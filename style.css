@@ -176,6 +176,7 @@ nav {
 }
 
 nav .logo img {
-  height: 150px;  /* adjust size */
+  height: 100px;  /* adjust size */
   width: auto;
 }
+
