@@ -27,7 +27,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
@@ -336,3 +336,4 @@ footer h3, footer p, footer h4 {
 .address-box p i {
   margin-right: 8px;
 }
+
