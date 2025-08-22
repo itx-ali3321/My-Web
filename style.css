@@ -97,7 +97,7 @@ main {
 /* Each contact card */
 .contact-card {
   text-align: center;
-  background: #c7f7f0; 
+  background: #c3fcf2; 
   padding: 30px;
   border: 1px solid #fccb93; /* orange bottom border */
   border-radius: 10px;
@@ -242,7 +242,7 @@ header {
 
 /* ===== About Section ===== */
 .about {
-  background: #f9f9f9;
+  background: #75f1e7;
   padding: 60px 20px;
 }
 
@@ -289,7 +289,7 @@ header {
 .btn {
   display: inline-block;
   background: #007BFF;
-  color: #fff;
+  color: #d6cdcd;
   padding: 12px 25px;
   border-radius: 8px;
   text-decoration: none;
@@ -336,4 +336,3 @@ footer h3, footer p, footer h4 {
 .address-box p i {
   margin-right: 8px;
 }
-
